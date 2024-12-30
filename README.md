@@ -3,7 +3,7 @@
 ![Netflix Logo](https://github.com/Kez123man/Netflix_first_project/blob/main/Couleur-logo-Netflix-3668402216.jpg)
 
 ## Overview
-This project involves a comprehensive analysis of Netflix's movies and TV shows data using SQL. The goal is to extract valuable insights and answer various business questions based on the dataset. The following README provides a detailed account of the project's objectives, business problems, solutions, findings, and conclusions.
+This SQL project involves a comprehensive analysis of Netflix's movies and TV shows data. The goal of the project is to extract valuable business insights and answer questions based on the dataset. The following README provides an account of the project's objectives, business problems, solutions, analysis, and conclusion.
 
 ## Objectives
 1. To analyse the distribution of content types (the number of movies and TV shows).
@@ -101,7 +101,7 @@ WHERE
 	duration = (SELECT MAX(duration) FROM netflix)
 ```
 
--- 6. Find content added in the last fifteen years
+-- 6. Find all the content added in the last fifteen years
 
 ```sql
 SELECT *
@@ -110,7 +110,7 @@ WHERE
     TO_DATE(date_added, 'DD/MM/YYYY') >= CURRENT_DATE - INTERVAL '15 years';
 ```
 
--- 7. Find all the movies/tv shows directed by 'Steven Spielberg' that came out before 2000.
+-- 7. Find all the movies/tv shows directed by 'Steven Spielberg' that came out before the year 2000.
 
 ```sql
 SELECT *
@@ -118,7 +118,7 @@ FROM netflix
 WHERE director LIKE '%Steven Spielberg%' AND release_year <= 2000;
 ```
 
--- 8. Find all the tv shows with more than 7 seasons
+-- 8. Find all the tv shows with more than 7 seasons.
 
 ```sql
 SELECT 
@@ -130,7 +130,7 @@ WHERE
 	SPLIT_PART(duration, ' ', 1)::numeric > 7
 ```
 
--- 9. Count the number of content items in each genre	
+-- 9. Count the number of content items in each genre.	
 
 ```sql
 SELECT 
@@ -140,8 +140,7 @@ FROM netflix
 GROUP BY 1
 ```
 
--- 10. Find rach year and average cotent release by France on Neflix
--- Return the top 3 years with the highest avg content release.
+-- 10. Find rach year and average cotent release by France on Neflix and return the top 3 years with the highest average content release.
 
 ```sql
 SELECT 
@@ -155,7 +154,7 @@ WHERE country = 'France'
 GROUP BY 1
 ```
 
--- 11. List all tv shows that are international shows 
+-- 11. List all tv shows that are international shows. 
 
 ```sql
 SELECT * FROM netflix
@@ -163,7 +162,7 @@ WHERE
 	listed_in ILIKE '%International TV Shows'
 ```
 
--- 12. Find all the content without a cast
+-- 12. Find all the content without a cast.
 
 ```sql
 SELECT *
@@ -194,9 +193,8 @@ GROUP BY 1
 ORDER BY 2 DESC 
 LIMIT 5
 ```
--- 15. Categorise the content based on the presence of the the keywords 'fight' and 'battle
--- in the description field. Label this content as 'bad' and the rest as 'good'.
--- Count the number of items in each category. 
+-- 15. Categorise the content based on the presence of the the keywords 'fight' and 'battle in the description field. Label this content as 'bad' and the rest as 'good'.
+Additionally, count the number of items in each category. 
 
 ```sql
 WITH new_table
@@ -215,3 +213,11 @@ COUNT(*) as total_content
 FROM new_table
 GROUP BY 1
 ```
+
+
+## Analysis and Conclusion
+Content Distribution: The dataset contains a diverse range of movies and TV shows, although the number of movies outnumber the number of tv shows almost 3:1.
+Common Ratings: Finding the most common TV and movie ratings can help provide an understanding of Netflix's target audience.
+Geographical Insights: The top countries demomstrate India as a large market that Netflix can continue to target.
+Content Categorisation: Categorising content based on specific keywords such as 'fight' and 'battle' helps one understand the nature of the content available.
+The analysis provided helps create a comprehensive view of Netflix's content and can help inform business strategy and the company's decision-making.
