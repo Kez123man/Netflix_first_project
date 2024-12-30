@@ -222,3 +222,10 @@ GROUP BY 1
 - **Content Categorisation:** Categorising content based on specific keywords such as 'fight' and 'battle' helps one understand the nature of the content available.
 
 The analysis provided helps create a comprehensive view of Netflix's content and can help inform business strategy and the company's decision-making.
+
+## Reference
+
+Special thanks to Zero Analyst, of which this work was adapted from.
+
+Zero Analyst (2024). netflix_sql_project (v1.2.3) [Source Code]. GitHub. [https://github.com/johndoe/ml-toolkit](https://github.com/najirh/netflix_sql_project/tree/main)
+
