@@ -216,8 +216,8 @@ GROUP BY 1
 
 
 ## Analysis and Conclusion
-Content Distribution: The dataset contains a diverse range of movies and TV shows, although the number of movies outnumber the number of tv shows almost 3:1.
-Common Ratings: Finding the most common TV and movie ratings can help provide an understanding of Netflix's target audience.
-Geographical Insights: The top countries demomstrate India as a large market that Netflix can continue to target.
-Content Categorisation: Categorising content based on specific keywords such as 'fight' and 'battle' helps one understand the nature of the content available.
+- **Content Distribution:** The dataset contains a diverse range of movies and TV shows, although the number of movies outnumber the number of tv shows almost 3:1.
+- **Common Ratings:** Finding the most common TV and movie ratings can help provide an understanding of Netflix's target audience.
+- **Geographical Insights:** The top countries demomstrate India as a large market that Netflix can continue to target.
+- **Content Categorisation:** Categorising content based on specific keywords such as 'fight' and 'battle' helps one understand the nature of the content available.
 The analysis provided helps create a comprehensive view of Netflix's content and can help inform business strategy and the company's decision-making.
