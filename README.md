@@ -1,4 +1,4 @@
-# Netflix_first_project
+# Netflix_SQL_project
 
 ![Netflix Logo](https://github.com/Kez123man/Netflix_first_project/blob/main/Couleur-logo-Netflix-3668402216.jpg)
 
